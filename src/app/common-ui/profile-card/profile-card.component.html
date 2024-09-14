@@ -1,31 +1,28 @@
+@if (profile) {
+
 <div class="profile-card">
   <div class="avatar-name">
-    <img
-      src="./assets/imgs/img.png"
-      alt="avatar"
-      class="profile-card__avatar"
-    />
+    <img [src]='profile.avatarUrl | imgUrl'
+     alt="avatar" 
+     class="profile-card__avatar" />
     <div class="profile-card__name">
-      <strong class="h6">Райан Гослинг</strong>
-      <span class="subtitle">rayn.gosling</span>
+      <strong class="h6">{{ profile.firstName }} {{ profile.lastName }}</strong>
+      <span class="subtitle">{{ profile.username }}</span>
     </div>
   </div>
   <div class="profile-card__description">
-    Список навыков, который мы обсудили выше, — основа резюме,
-    но не единственная его часть. Также можно рассказать о себе в классическом
-    смысле — этот раздел можно добавить в сопроводительное письмо.
+    {{ profile.description }}
   </div>
   <div class="profile-card__tags">
-    <div class="skill-tag">Angular</div>
-    <div class="skill-tag">React</div>
-    <div class="skill-tag">Vue</div>
-    <div class="skill-tag">NPM</div>
-    <div class="skill-tag">Jest</div>
-  
-   
- 
+    @for (skill of profile.stack; track $index) {
+
+    <div class="skill-tag">{{ skill }}</div>
+    }
   </div>
   <div class="profile-card__action-btns">
     <button class="btn">Подписаться</button>
   </div>
 </div>
+} @else {
+<div>profile не найден</div>
+}
