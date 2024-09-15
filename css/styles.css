@@ -26,10 +26,23 @@
   font-weight: 800;
   src: url("/assets/fonts/JetBrainsMono-Bold.woff2") format("woof2");
 }
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.mb32 {
+  margin-bottom: 32px;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
 :root {
   --dark-color: #000000;
   --light-color: #ffffff;
   --primary-color: #ae7aff;
+  --gray-color: #5F646D;
 }
 
 *,
@@ -44,6 +57,12 @@ body {
   background: var(--dark-color);
   color: var(--light-color);
   font-family: "JetBrains Mono", sans-serif;
+  background-image: url(/assets/imgs/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 .skill-tag {
@@ -57,13 +76,37 @@ body {
 }
 
 .btn {
-  border: none;
+  width: 90%;
   background: var(--primary-color);
   color: var(--dark-color);
   padding: 10px 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+}
+
+.btn-shadow {
+  position: relative;
+}
+.btn-shadow::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -4px;
+  right: -4px;
+  background: var(--gray-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
 }
 
 .h6 {
