@@ -3,14 +3,18 @@ import { inject, Injectable } from '@angular/core';
 import { Profile } from '../interfaces/profile.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProfileService {
-hhtp: HttpClient = inject(HttpClient)
+  hhtp: HttpClient = inject(HttpClient);
 
-baseApiUrl = 'https://icherniakov.ru/yt-course/'
+  baseApiUrl = 'https://icherniakov.ru/yt-course/';
 
-getTestAccounts(){
- return this.hhtp.get<Profile[]>(`${this.baseApiUrl}account/test_accounts`)
-}
+  getTestAccounts() {
+    return this.hhtp.get<Profile[]>(`${this.baseApiUrl}account/test_accounts`);
+  }
+
+  getMe() {
+    return this.hhtp.get<Profile>(`${this.baseApiUrl}account/me`)
+  }
 }
