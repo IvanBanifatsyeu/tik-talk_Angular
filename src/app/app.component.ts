@@ -12,5 +12,4 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
- 
 }
