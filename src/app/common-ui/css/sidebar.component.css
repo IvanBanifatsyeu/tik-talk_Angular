@@ -21,15 +21,12 @@
   grid-gap: 12px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 24px; 
+  line-height: 24px;
   width: 100%;
   text-align: left;
   border-radius: 2px;
-
-
-  &:hover,
-  &:focus-visible {
-    background: var(--dark-hover-color);
-    color: var(--primary-color);
-  }
+}
+.menu-item:hover, .menu-item:focus-visible {
+  background: var(--dark-hover-color);
+  color: var(--primary-color);
 }

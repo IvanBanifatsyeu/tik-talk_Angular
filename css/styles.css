@@ -30,6 +30,10 @@
   margin-bottom: 16px;
 }
 
+.mb20 {
+  margin-bottom: 20px;
+}
+
 .mb32 {
   margin-bottom: 32px;
 }
@@ -38,11 +42,16 @@
   margin-bottom: 60px;
 }
 
+.ml16 {
+  margin-left: 16px;
+}
+
 :root {
   --dark-color: #000000;
   --light-color: #ffffff;
   --primary-color: #ae7aff;
   --gray-color: #5F646D;
+  --dark-hover-color: #161616;
 }
 
 *,
@@ -76,7 +85,7 @@ body {
 }
 
 .btn {
-  width: 90%;
+  width: 100%;
   padding: 10px 20px;
   background: var(--primary-color);
   cursor: pointer;
