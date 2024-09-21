@@ -12,4 +12,16 @@
 </nav>
 
 <p class="medium-text mb20">Subscribers</p>
-<app-subscriber-card></app-subscriber-card>
+
+<!-- <pre>{{subscribers$ | async | json}}</pre> -->
+ @for (profile of subscribers$ | async ; track profile.id) {
+  <app-subscriber-card [profile]="profile"></app-subscriber-card>
+ }
+
+
+<div class="mt20 to-subscribers">
+  <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text"
+    >all subscribers</a
+  >
+  <svg icon="arrow" class="to-subscribers-icon"></svg>
+</div>
