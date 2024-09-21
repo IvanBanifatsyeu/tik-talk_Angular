@@ -30,3 +30,11 @@
   background: var(--dark-hover-color);
   color: var(--primary-color);
 }
+.menu-item:hover .menu-item svg, .menu-item:focus-visible .menu-item svg {
+  color: var(--primary-color);
+}
+
+.menu-item svg {
+  width: 16px;
+  height: 16px;
+}

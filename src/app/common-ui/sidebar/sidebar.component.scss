@@ -13,6 +13,7 @@
   padding: 16px 12px;
   cursor: pointer;
   border: none;
+ 
   background: none;
   color: var(--light-color);
   display: grid;
@@ -21,15 +22,25 @@
   grid-gap: 12px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 24px; 
+  line-height: 24px;
   width: 100%;
   text-align: left;
   border-radius: 2px;
-
 
   &:hover,
   &:focus-visible {
     background: var(--dark-hover-color);
     color: var(--primary-color);
+
+    .menu-item svg {
+      color: var(--primary-color);
+    }
   }
 }
+
+.menu-item svg {
+  width: 16px;
+  height: 16px;
+  
+}
+

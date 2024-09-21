@@ -2,11 +2,14 @@
 
 <nav>
   <ul class="main-menu-list">
-    <li>
+    <li *ngFor="let menuItem of menuItems">
       <button class="menu-item">
-        <img src="/assets/svg/home.svg" alt="home-logo" />
-        <span>My page</span>
+        <svg [icon]="menuItem.icon"></svg>
+        <span>{{ menuItem.label }}</span>
       </button>
     </li>
   </ul>
 </nav>
+
+<p class="medium-text mb20">Subscribers</p>
+<app-subscriber-card></app-subscriber-card>
