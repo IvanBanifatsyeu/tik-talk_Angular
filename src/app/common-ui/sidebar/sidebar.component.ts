@@ -5,6 +5,7 @@ import { SubscriberCardComponent } from "./subscriber-card/subscriber-card.compo
 import { RouterModule } from '@angular/router';
 import { ProfileService } from '../../data/services/profile.service';
 import { firstValueFrom } from 'rxjs';
+import { ImgUrlPipe } from "../../helpers/pipes/img-url.pipe";
 
 @Component({
   selector: 'app-sidebar',
@@ -14,14 +15,17 @@ import { firstValueFrom } from 'rxjs';
     CommonModule,
     SubscriberCardComponent,
     RouterModule,
-  ],
+    ImgUrlPipe
+],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
   profileService = inject(ProfileService)
 
-  subscribers$= this.profileService.getSubscribersShotList()
+  subscribers$ = this.profileService.getSubscribersShotList()
+  
+  me= this.profileService.me
 
   menuItems = [
     {

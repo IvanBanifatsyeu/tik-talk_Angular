@@ -42,6 +42,10 @@
   margin-bottom: 60px;
 }
 
+.mt20 {
+  margin-top: 20px;
+}
+
 .ml16 {
   margin-left: 16px;
 }
@@ -63,7 +67,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   background: var(--dark-color);
   background-image: url(/assets/imgs/background.jpg);
   background-repeat: no-repeat;
