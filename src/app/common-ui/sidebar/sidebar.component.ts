@@ -4,6 +4,7 @@ import { SvgIconComponent } from "../svg-icon/svg-icon.component";
 import { SubscriberCardComponent } from "./subscriber-card/subscriber-card.component";
 import { RouterModule } from '@angular/router';
 import { ProfileService } from '../../data/services/profile.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -39,4 +40,8 @@ export class SidebarComponent {
       link: 'search',
     },
   ];
+
+  ngOnInit() {
+    firstValueFrom(this.profileService.getMe() )
+  }
 }
