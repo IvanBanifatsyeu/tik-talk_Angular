@@ -23,6 +23,10 @@ export class ProfileService {
     .pipe(tap(res => this.me.set(res)))
   }
 
+  getAccount(id: string) {
+    return this.http.get<Profile>(`${this.baseApiUrl}account/${id}`);
+  }
+
   getSubscribersShotList() {
     return this.http
       .get<Pageable<Profile>>(`${this.baseApiUrl}account/subscribers/`)
