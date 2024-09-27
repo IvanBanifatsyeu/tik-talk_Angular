@@ -27,9 +27,9 @@ export class ProfileService {
     return this.http.get<Profile>(`${this.baseApiUrl}account/${id}`);
   }
 
-  getSubscribersShotList() {
+  getSubscribersShotList(num = 3) {
     return this.http
       .get<Pageable<Profile>>(`${this.baseApiUrl}account/subscribers/`)
-      .pipe(map((res) => res.items.slice(0, 3)));
+      .pipe(map((res) => res.items.slice(0, num)));
   }
 }

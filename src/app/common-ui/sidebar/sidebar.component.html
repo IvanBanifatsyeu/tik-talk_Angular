@@ -13,9 +13,9 @@
 
 <p class="medium-text mb20">Subscribers</p>
 
-<!-- <pre>{{subscribers$ | async | json}}</pre> -->
- @for (profile of subscribers$ | async ; track profile.id) {
-  <app-subscriber-card [profile]="profile"></app-subscriber-card>
+
+ @for (subscriber of subscribers$ | async ; track subscriber.id) {
+  <app-subscriber-card [profile]="subscriber"></app-subscriber-card>
  }
 
 
@@ -36,7 +36,7 @@
     <div class="medium-text username-text">{{ me.username }}</div>
 
    <a [routerLink]="['settings']" class="settings-btn">
-    <svg icon="settings"></svg>
+    <svg icon="settings" ></svg>
    </a>
   }
 

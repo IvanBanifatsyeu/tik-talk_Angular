@@ -1,14 +1,20 @@
 import { Component, input } from '@angular/core';
 import { Profile } from '../../data/interfaces/profile.interface';
 import { ImgUrlPipe } from "../../helpers/pipes/img-url.pipe";
+import { LogPipe } from '../../helpers/pipes/log.pipe';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-profile-header',
   standalone: true,
-  imports: [ImgUrlPipe],
+  imports: [ImgUrlPipe, LogPipe, RouterModule],
   templateUrl: './profile-header.component.html',
-  styleUrl: './profile-header.component.scss'
+  styleUrl: './profile-header.component.scss',
 })
 export class ProfileHeaderComponent {
-  profile = input<Profile>()
+  profile = input<Profile>();
+
+  con(val: any) {
+    console.log(val);
+  }
 }
