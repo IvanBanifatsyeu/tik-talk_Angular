@@ -27,6 +27,7 @@
   width: 100%;
   text-align: left;
   border-radius: 2px;
+  text-decoration: none;
 }
 .menu-item:hover, .menu-item:focus-visible {
   background: var(--dark-hover-color);
