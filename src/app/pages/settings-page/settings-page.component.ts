@@ -42,7 +42,7 @@ export class SettingsPageComponent {
   }
 
   onSave() {
-    console.log('onSave');
+    
     this.form.markAsTouched();
     this.form.updateValueAndValidity();
 

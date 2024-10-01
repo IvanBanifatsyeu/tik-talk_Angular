@@ -14,7 +14,5 @@ import { RouterModule } from '@angular/router';
 export class ProfileHeaderComponent {
   profile = input<Profile>();
 
-  con(val: any) {
-    console.log(val);
-  }
+ 
 }

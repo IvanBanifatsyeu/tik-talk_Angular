@@ -32,7 +32,7 @@ export class LoginPageComponent {
       //@ts-ignore
       this.authService.login(this.form.value).subscribe((res) => {
         this.router.navigate(['']);
-        console.log(res);
+      
       });
     }
   }
